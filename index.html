@@ -62,7 +62,13 @@
     
             <a-assets>
                 <video src="https://cdn.aframe.io/videos/bunny.mp4"
-                    preload="auto" id="vid" response-type="arraybuffer" loop
+                    preload="auto" id="vid1" response-type="arraybuffer" loop
+                    crossorigin webkit-playsinline autoplay playsinline>
+                </video>
+            </a-assets>
+            <a-assets>
+                <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                    preload="auto" id="vid2" response-type="arraybuffer" loop
                     crossorigin webkit-playsinline autoplay playsinline>
                 </video>
             </a-assets>
@@ -73,7 +79,22 @@
                 smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5"
             >
                 <a-video
-                    src="#vid"
+                    src="#vid1"
+                    position='50 150 -100'
+                    rotation='90 0 180'
+                    width='300'
+                    height='175'
+                    >
+                </a-video>
+            </a-nft>
+
+            <a-nft
+                videohandler
+                type='nft' url='https://github.com/mugenyie/AugmentedReality-ImageTracking/blob/gh-pages/dataNFT/pinball'
+                smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5"
+            >
+                <a-video
+                    src="#vid2"
                     position='50 150 -100'
                     rotation='90 0 180'
                     width='300'
